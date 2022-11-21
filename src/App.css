@@ -1,0 +1,110 @@
+.App {
+  padding: 40px;
+}
+
+.item-text {
+  display: block;
+  align-self: center;
+  width: 100%;
+  justify-self: stretch;
+}
+
+.item-done-checkbox {
+  display: flex;
+  align-self: center;
+}
+
+.item-remove-button {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-self: center;
+  padding: 0;
+  line-height: 16px;
+}
+
+.item-remove-button:after {
+  content: "╳";
+  margin-top: -2px;
+}
+
+.item-timestamp {
+  font-size: 12px;
+}
+
+.todo-list {
+  width: 100%;
+  padding-inline-start: 0;
+}
+
+.todo-list > li {
+  list-style: none;
+  display: flex;
+  padding: 3px;
+  justify-content: stretch;
+  align-content: stretch;
+}
+.todo-list > li:nth-child(2n) {
+  background: silver;
+}
+
+.todo-list-container {
+  height: 600px;
+  width: 450px;
+  overflow-y: scroll;
+}
+
+.messages-list {
+  position: absolute;
+  overflow: visible;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+}
+
+.message-item {
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 50px;
+  border: solid 1px gray;
+  border-radius: 5px;
+  background: silver;
+  padding: 5px;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.message-item.message-type-error {
+  background: #D05050;
+  color: silver;
+}
+
+.message-item.message-type-warning {
+  background: #E0D030;
+  color: black;
+}
+
+.message-date {
+  position: absolute;
+  display: block;
+  right: 5px;
+  bottom: 5px;
+}
+
+.sort-time-order {
+  position: relative;
+  appearance: none;
+}
+
+.sort-time-order:checked:after {
+  content: "▲ ascending";
+}
+
+.sort-time-order:after {
+  content: "▼ descending";
+  border: solid 1px silver;
+  border-radius: 4px;
+}
